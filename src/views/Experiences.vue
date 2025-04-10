@@ -1,10 +1,10 @@
 <template>
-    <h1>Experiences</h1>
+    <h1>{{ text[lang][0] }}</h1>
 
     <div class="exp">
         <div class="ex-head">
             <svg> <use xlink:href="../assets/icons.svg#certificate" width="30" height="30"></use> </svg>
-            <h2>Competitions</h2>
+            <h2>{{ text[lang][1] }}</h2>
         </div>
         <div class="ex-body">
             <div class="ex-certificates">
@@ -15,7 +15,7 @@
                     <div>
                         <h3>OSII Week 2024 - Game Development with Construct 2</h3>
                         <p><b>Universitas Katolik Darma Cendika</b></p>
-                        <p>Competition - Aug 2024</p>
+                        <p>{{ subject[lang][0] }} - {{ month[lang][7] }} 2024</p>
                     </div>
                 </div>
                 <div class="ex-see xs-green" @click="goto('https://drive.google.com/file/d/1vdFkhA-btYCKGsLGLKVvaV5nf5h9LV8m/view')">
@@ -33,8 +33,8 @@
         <div class="ex-body">
             <div class="ex-certificates">
                 <div>
-                    <h3>Praktik Kerja Lapangan Educa Studio</h3>
-                    <p>Apprenticeship - Expires: Jan 2028</p>
+                    <h3>✨ Praktik Kerja Lapangan Educa Studio</h3>
+                    <p>{{ subject[lang][1] }} - {{ text[lang][2] }} {{ month[lang][0] }} 2028</p>
                 </div>
                 <div class="ex-see xs-green" @click="goto('https://www.gamelab.id/certificate/GL4581076794')">
                     <svg> <use xlink:href="../assets/icons.svg#moneycheck" width="20" height="20"></use> </svg>
@@ -43,7 +43,7 @@
             <div class="ex-certificates">
                 <div>
                     <h3>Game Fundamental: Construct</h3>
-                    <p>Course - Expires: Nov 2026</p>
+                    <p>{{ subject[lang][2] }} - {{ text[lang][2] }} {{ month[lang][10] }} 2026</p>
                 </div>
                 <div class="ex-see" @click="goto('https://gamelab.id/certificate/GL5582332394')">
                     <svg> <use xlink:href="../assets/icons.svg#file" width="20" height="20"></use> </svg>
@@ -52,7 +52,7 @@
             <div class="ex-certificates">
                 <div>
                     <h3>JavaScript Untuk Game Developer</h3>
-                    <p>Course - Expires: Jan 2027</p>
+                    <p>{{ subject[lang][2] }} - {{ text[lang][2] }} {{ month[lang][0] }} 2027</p>
                 </div>
                 <div class="ex-see" @click="goto('https://gamelab.id/certificate/GL1495418033')">
                     <svg> <use xlink:href="../assets/icons.svg#file" width="20" height="20"></use> </svg>
@@ -61,7 +61,7 @@
             <div class="ex-certificates">
                 <div>
                     <h3>Game 2D: Phaser Game Framework</h3>
-                    <p>Course - Expires: Jun 2027</p>
+                    <p>{{ subject[lang][2] }} - {{ text[lang][2] }} {{ month[lang][5] }} 2027</p>
                 </div>
                 <div class="ex-see" @click="goto('https://gamelab.id/certificate/GL8584123770')">
                     <svg> <use xlink:href="../assets/icons.svg#file" width="20" height="20"></use> </svg>
@@ -70,7 +70,7 @@
             <div class="ex-certificates">
                 <div>
                     <h3>Game 3D: Three.js</h3>
-                    <p>Course - Expires: Jun 2027</p>
+                    <p>{{ subject[lang][2] }} - {{ text[lang][2] }} {{ month[lang][5] }} 2027</p>
                 </div>
                 <div class="ex-see" @click="goto('https://gamelab.id/certificate/GL5903657587')">
                     <svg> <use xlink:href="../assets/icons.svg#file" width="20" height="20"></use> </svg>
@@ -87,8 +87,8 @@
         <div class="ex-body">
             <div class="ex-certificates">
                 <div>
-                    <h3>UKK Nasional 2025 Paket 3 - Kasir Toko Bakery</h3>
-                    <p>Project - Feb 2025</p>
+                    <h3>✨ UKK Nasional 2025 Paket 3 - Kasir Toko Bakery</h3>
+                    <p>{{ subject[lang][3] }} - {{ month[lang][1] }} 2025</p>
                 </div>
                 <div class="ex-see xs-orange" @click="goto('https://github.com/r-danialf/bakeryukk')">
                     <svg> <use href="../assets/icons.svg#git" width="20" height="20"></use> </svg>
@@ -96,8 +96,8 @@
             </div>
             <div class="ex-certificates">
                 <div>
-                    <h3>Game Construct 3 - Papershot</h3>
-                    <p>Project - Dec 2021</p>
+                    <h3>✨ Game Construct 3 - Papershot</h3>
+                    <p>{{ subject[lang][3] }} - {{ month[lang][11] }} 2021</p>
                 </div>
                 <div class="flex">
                     <div class="ex-see xs-green" @click="goto('https://rdft-preserved-private-papershot.netlify.app')">
@@ -110,8 +110,8 @@
             </div>
             <div class="ex-certificates">
                 <div>
-                    <h3>Game Construct 2 - Cloverdot Express (OSII Week 2024)</h3>
-                    <p>Project - Aug 2024</p>
+                    <h3>✨ Game Construct 2 - Cloverdot Express (OSII Week 2024)</h3>
+                    <p>{{ subject[lang][3] }} - {{ month[lang][7] }} 2024</p>
                 </div>
                 <div class="flex">
                     <div class="ex-see xs-green" @click="goto('https://rdft-cloverdotexpress.netlify.app/')">
@@ -121,8 +121,8 @@
             </div>
             <div class="ex-certificates">
                 <div>
-                    <h3>Easy SPP Logger (Native PHP)</h3>
-                    <p>Project - Jun 2024</p>
+                    <h3>Easy SPP Tracker (Native PHP)</h3>
+                    <p>{{ subject[lang][3] }} - {{ month[lang][5] }} 2024</p>
                 </div>
                 <div class="ex-see xs-orange" @click="goto('https://github.com/r-danialf/easySPP')">
                     <svg> <use href="../assets/icons.svg#git" width="20" height="20"></use> </svg>
@@ -140,7 +140,7 @@
             <div class="ex-certificates">
                 <div>
                     <h3>Aplikasi Back-End untuk Pemula</h3>
-                    <p>Course - Expires: April 2026</p>
+                    <p>{{ subject[lang][2] }} - {{ text[lang][2] }} {{ month[lang][3] }} 2026</p>
                 </div>
                 <div class="ex-see" @click="goto('https://www.dicoding.com/certificates/EYX467JNRPDL')">
                     <svg> <use xlink:href="../assets/icons.svg#file" width="20" height="20"></use> </svg>
@@ -149,7 +149,7 @@
             <div class="ex-certificates">
                 <div>
                     <h3>Dasar Pemrograman JavaScript</h3>
-                    <p>Course - Expires: April 2026</p>
+                    <p>{{ subject[lang][2] }} - {{ text[lang][2] }} {{ month[lang][3] }} 2026</p>
                 </div>
                 <div class="ex-see" @click="goto('https://www.dicoding.com/certificates/1OP80D001XQK')">
                     <svg> <use xlink:href="../assets/icons.svg#file" width="20" height="20"></use> </svg>
@@ -160,6 +160,57 @@
 </template>
 
 <script setup>
+import { inject } from "vue";
+const lang = inject("lang");
+
+const text = {
+    en: [
+        "Experiences",
+        "Competitions",
+        "Expires:"
+    ],
+    id: [
+        "Pengalaman",
+        "Kompetisi",
+        "Berakhir:"
+    ],
+    jv: [
+
+    ]
+}
+
+const subject = {
+    en: [
+        "Competition",
+        "Apprenticeship",
+        "Course",
+        "Project"
+    ],
+    id: [
+        "Kompetisi",
+        "Magang",
+        "Kursus",
+        "Proyek"
+    ],
+    jv: [
+
+    ]
+}
+
+const month = {
+    en: [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ],
+    id: [
+        "Januari", "Februari", "Maret", "April", "Mei", "Juni",
+        "Juli", "Agustus", "September", "Oktober", "November", "Desember"
+    ],
+    jv: [
+
+    ]
+}
+
 const goto = (link) => {
     window.open(link, "_blank");
 }

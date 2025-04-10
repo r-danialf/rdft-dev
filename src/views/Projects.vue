@@ -1,6 +1,13 @@
 <template>
-    <h1>Projects</h1>
-    <!-- Papershot -->
+    <h1>{{ text[lang][0] }}</h1>
+
+    <div class="dd-head">
+        <div class="dd-title">
+            <h2>{{ text[lang][1] }}</h2>
+            <p>{{ text[lang][2] + text[lang][3] }}</p>
+        </div>
+    </div>
+    <!--     
     <div class="dd-head" @click="p_paper = !p_paper">
         <div class="dd-title">
             <h2>Papershot</h2>
@@ -23,9 +30,9 @@
             <svg> <use xlink:href="../assets/icons.svg#gamejolt" width="30" height="30"></use> </svg>
             <svg> <use xlink:href="../assets/icons.svg#itchio" width="30" height="30"></use> </svg>
         </div>
-    </div>
+    </div> -->
 
-    <!-- Cloverdot Express -->
+    <!--
     <div class="dd-head" @click="p_clover = !p_clover">
         <div class="dd-title">
             <h2>Cloverdot Express</h2>
@@ -49,14 +56,35 @@
             <svg> <use xlink:href="../assets/icons.svg#itchio" width="30" height="30"></use> </svg>
         </div>
     </div>
+    -->
 </template>
 
 
 <script setup>
 import { ref } from 'vue';
+import { inject } from 'vue';
+const lang = inject("lang");
 
 const p_paper = ref(false);
 const p_clover = ref(false);
+
+const text = {
+    en: [
+        "Projects",
+        "Please come back again later!",
+        "Looks like this section is empty... ",
+        "But don't worry because I'm preparing something!"
+    ],
+    id: [
+        "Proyek",
+        "Tolong kembali lagi kapan-kapan!",
+        "Sepertinya bagian ini masih kosong... ",
+        "Tapi jangan khawatir karena aku masih menyiapkan sesuatu!"
+    ],
+    jv: [
+        "ꦥꦿꦺꦴꦪꦺꦏ꧀"
+    ]
+}
 </script>
 
 

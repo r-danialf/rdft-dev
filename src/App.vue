@@ -2,9 +2,9 @@
   <div class="r-titlebar">
     <h1>@rdft.dev</h1>
     <div>
-      <span @click="lang = 'en'" :class="{ bold: lang == 'en' }">EN</span> - 
-      <span @click="lang = 'id'" :class="{ bold: lang == 'id' }">ID</span> - 
-      <span @click="lang = 'jv'" :class="{ bold: lang == 'jv' }">JV</span>
+      <span @click="lang = 'en'" :class="{ bold: lang == 'en' }">EN</span>
+      - <span @click="lang = 'id'" :class="{ bold: lang == 'id' }">ID</span> 
+      <!-- - <span @click="lang = 'jv'" :class="{ bold: lang == 'jv' }">ꦗꦮ</span> -->
     </div>
   </div>
   <div class="r-navbar">
@@ -54,7 +54,7 @@ const text = {
   ],
   jv: [
     "ꦱꦺꦴꦥꦺꦴꦏꦸꦭ",
-    "ꦥ꧀ꦫꦺꦴꦪꦺꦏ꧀",
+    "ꦥꦿꦺꦴꦪꦺꦏ꧀",
     "ꦥꦼꦔꦭꦩꦤ꧀"
   ]
 }
